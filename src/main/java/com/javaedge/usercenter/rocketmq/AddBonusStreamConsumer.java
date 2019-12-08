@@ -9,6 +9,9 @@ import org.springframework.cloud.stream.annotation.StreamListener;
 import org.springframework.cloud.stream.messaging.Sink;
 import org.springframework.stereotype.Service;
 
+/**
+ * @author JavaEdge
+ */
 @Service
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
 @Slf4j

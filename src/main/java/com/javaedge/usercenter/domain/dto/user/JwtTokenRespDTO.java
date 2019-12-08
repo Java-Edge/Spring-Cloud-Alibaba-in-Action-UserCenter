@@ -5,6 +5,10 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * @author JavaEdge
+ *
+ */
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder

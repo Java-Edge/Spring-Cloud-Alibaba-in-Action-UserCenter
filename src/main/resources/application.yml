@@ -3,7 +3,7 @@ spring:
     url: jdbc:mysql://localhost:3306/user_center
     hikari:
       username: root
-      password: root
+      password: 970722sss
       # >= 8.x: com.mysql.cj.jdbc.Driver
       # <= 5.x: com.mysql.jdbc.Driver
       driver-class-name: com.mysql.cj.jdbc.Driver
@@ -17,11 +17,11 @@ spring:
         # namespace: 56116141-d837-4d15-8842-94e153bb6cfb
         # NJ
         # 指定集群名称
-#        cluster-name: BJ
-#        metadata:
-#          instance: c
-#          haha: hehe
-#          version: v1
+    #        cluster-name: BJ
+    #        metadata:
+    #          instance: c
+    #          haha: hehe
+    #          version: v1
     stream:
       rocketmq:
         binder:
@@ -29,30 +29,25 @@ spring:
       bindings:
         input:
           destination: add-bonus
-          # 如果用的是RocketMQ,必须设置
-          # 如果其他MQ,可留空
           group: binder-group
-        my-input:
-          destination: stream-my-topic
-          group: my-group
 
 
   application:
     # 服务名称尽量用-，不要用_，不要用特殊字符
     name: user-center
-#  zipkin:
-#    base-url: http://localhost:9411/
-#    discoveryClientEnabled: false
-#  sleuth:
-#    sampler:
-#      # 抽样率，默认是0.1（10%）
-#      probability: 1.0
+  zipkin:
+    base-url: http://localhost:9411/
+    discoveryClientEnabled: false
+  sleuth:
+    sampler:
+      # 抽样率，默认是0.1（10%）
+      probability: 1.0
 server:
   port: 8081
-#logging:
-#  level:
-#    com.alibaba.nacos: error
-#    org.springframework.cloud.sleuth: debug
+logging:
+  level:
+    com.alibaba.nacos: error
+    org.springframework.cloud.sleuth: debug
 #jwt:
 #  secret: aaaaaaabbbbbbcccccdddddaaaaaaabbbbbbcccccdddddaaaaaaabbbbbbcccccddddd
 #  # 有效期，单位秒，默认2周

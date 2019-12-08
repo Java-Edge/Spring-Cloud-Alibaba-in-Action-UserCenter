@@ -17,6 +17,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 /**
@@ -45,7 +46,7 @@ public class UserController {
     public String genToken() {
         Map<String, Object> userInfo = new HashMap<>(3);
         userInfo.put("id", 1);
-        userInfo.put("wxNickname", "大目");
+        userInfo.put("wxNickname", "JavaEdge");
         userInfo.put("role", "admin");
         return this.jwtOperator.generateToken(userInfo);
     }

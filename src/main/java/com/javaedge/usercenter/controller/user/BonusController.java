@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * @author JavaEdge
+ */
 @RestController
 @RequestMapping("/users")
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))

@@ -14,6 +14,10 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * @author JavaEdge
+ *
+ */
 @Slf4j
 @RequiredArgsConstructor
 @SuppressWarnings("WeakerAccess")
@@ -21,7 +25,7 @@ import java.util.Map;
 public class JwtOperator {
     /**
      * 秘钥
-     * - 默认aaabbbcccdddeeefffggghhhiiijjjkkklllmmmnnnooopppqqqrrrsssttt
+     * - 默认secret
      */
     @Value("${secret:aaabbbcccdddeeefffggghhhiiijjjkkklllmmmnnnooopppqqqrrrsssttt}")
     private String secret;
@@ -127,7 +131,6 @@ public class JwtOperator {
 //
 //        // 测试1: 生成token
 //        String token = jwtOperator.generateToken(objectObjectHashMap);
-//        // 会生成类似该字符串的内容: eyJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJpYXQiOjE1NjU1ODk4MTcsImV4cCI6MTU2Njc5OTQxN30.27_QgdtTg4SUgxidW6ALHFsZPgMtjCQ4ZYTRmZroKCQ
 //        System.out.println(token);
 //
 //        // 将我改成上面生成的token!!!

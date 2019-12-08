@@ -7,6 +7,9 @@ import cn.binarywang.wx.miniapp.config.impl.WxMaDefaultConfigImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * @author JavaEdge
+ */
 @Configuration
 public class WxConfiguration {
     @Bean
